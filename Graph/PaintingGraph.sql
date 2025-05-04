@@ -8,7 +8,7 @@ GO
 USE PaintingGraph;
 GO
 
--- Создание таблиц узлов
+-- РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС† СѓР·Р»РѕРІ
 USE PaintingGraph;
 GO
 
@@ -40,55 +40,55 @@ CREATE TABLE Styles (
 ) AS NODE;
 
 
--- Вставка данных в таблицы узлов
+-- Р’СЃС‚Р°РІРєР° РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†С‹ СѓР·Р»РѕРІ
 INSERT INTO Paintings (ID, Title, YearCreation)
 VALUES 
-(1, 'Подсолнухи', 1887),
-(2, 'Ночное кафе', 1888),
-(3, 'Супрематическая композиция', 1916),
-(4, 'Золотые рыбки', 1902),
-(5, 'Розовый сад', 1912),
-(6, 'Герника', 1937),
-(7, 'Автопортрет с отрезанным ухом и трубкой', 1889),
-(8, 'Постоянство памяти', 1931),
-(9, 'Над городом', 1918),
-(10, 'Крик', 1893);
+(1, 'РџРѕРґСЃРѕР»РЅСѓС…Рё', 1887),
+(2, 'РќРѕС‡РЅРѕРµ РєР°С„Рµ', 1888),
+(3, 'РЎСѓРїСЂРµРјР°С‚РёС‡РµСЃРєР°СЏ РєРѕРјРїРѕР·РёС†РёСЏ', 1916),
+(4, 'Р—РѕР»РѕС‚С‹Рµ СЂС‹Р±РєРё', 1902),
+(5, 'Р РѕР·РѕРІС‹Р№ СЃР°Рґ', 1912),
+(6, 'Р“РµСЂРЅРёРєР°', 1937),
+(7, 'РђРІС‚РѕРїРѕСЂС‚СЂРµС‚ СЃ РѕС‚СЂРµР·Р°РЅРЅС‹Рј СѓС…РѕРј Рё С‚СЂСѓР±РєРѕР№', 1889),
+(8, 'РџРѕСЃС‚РѕСЏРЅСЃС‚РІРѕ РїР°РјСЏС‚Рё', 1931),
+(9, 'РќР°Рґ РіРѕСЂРѕРґРѕРј', 1918),
+(10, 'РљСЂРёРє', 1893);
 
 INSERT INTO Authors (ID, NameAuthors, LastNameAuthors, PatronymicAuthors)
 VALUES 
-(1, 'Винсент', 'Ван Гог', NULL),
-(2, 'Казимир', 'Малевич', 'Северинович'),
-(3, 'Густав', 'Климт', NULL),
-(4, 'Пабло', 'Пикассо', NULL),
-(5, 'Клод', 'Моне', NULL),
-(6, 'Сальвадор', 'Дали', NULL),
-(7, 'Эдвард', 'Мунк', NULL),
-(8, 'Фрида', 'Кало', NULL),
-(9, 'Марк', 'Шагал', NULL),
-(10, 'Эдгар', 'Дега', NULL);
+(1, 'Р’РёРЅСЃРµРЅС‚', 'Р’Р°РЅ Р“РѕРі', NULL),
+(2, 'РљР°Р·РёРјРёСЂ', 'РњР°Р»РµРІРёС‡', 'РЎРµРІРµСЂРёРЅРѕРІРёС‡'),
+(3, 'Р“СѓСЃС‚Р°РІ', 'РљР»РёРјС‚', NULL),
+(4, 'РџР°Р±Р»Рѕ', 'РџРёРєР°СЃСЃРѕ', NULL),
+(5, 'РљР»РѕРґ', 'РњРѕРЅРµ', NULL),
+(6, 'РЎР°Р»СЊРІР°РґРѕСЂ', 'Р”Р°Р»Рё', NULL),
+(7, 'Р­РґРІР°СЂРґ', 'РњСѓРЅРє', NULL),
+(8, 'Р¤СЂРёРґР°', 'РљР°Р»Рѕ', NULL),
+(9, 'РњР°СЂРє', 'РЁР°РіР°Р»', NULL),
+(10, 'Р­РґРіР°СЂ', 'Р”РµРіР°', NULL);
 
 INSERT INTO Genres (ID, Name)
 VALUES 
-(1, 'Живопись'),
-(2, 'Натюрморт'),
-(3, 'Портрет'),
-(4, 'Пейзаж'),
-(5, 'Абстракция');
+(1, 'Р–РёРІРѕРїРёСЃСЊ'),
+(2, 'РќР°С‚СЋСЂРјРѕСЂС‚'),
+(3, 'РџРѕСЂС‚СЂРµС‚'),
+(4, 'РџРµР№Р·Р°Р¶'),
+(5, 'РђР±СЃС‚СЂР°РєС†РёСЏ');
 
 INSERT INTO Styles (ID, Name)
 VALUES 
-(1, 'Импрессионизм'),
-(2, 'Постимпрессионизм'),
-(3, 'Супрематизм'),
-(4, 'Экспрессионизм'),
-(5, 'Сюрреализм'),
-(6, 'Кубизм'),
-(7, 'Модерн'),
-(8, 'Минимализм'),
-(9, 'Романтизм'),
-(10, 'Примитивизм');
+(1, 'РРјРїСЂРµСЃСЃРёРѕРЅРёР·Рј'),
+(2, 'РџРѕСЃС‚РёРјРїСЂРµСЃСЃРёРѕРЅРёР·Рј'),
+(3, 'РЎСѓРїСЂРµРјР°С‚РёР·Рј'),
+(4, 'Р­РєСЃРїСЂРµСЃСЃРёРѕРЅРёР·Рј'),
+(5, 'РЎСЋСЂСЂРµР°Р»РёР·Рј'),
+(6, 'РљСѓР±РёР·Рј'),
+(7, 'РњРѕРґРµСЂРЅ'),
+(8, 'РњРёРЅРёРјР°Р»РёР·Рј'),
+(9, 'Р РѕРјР°РЅС‚РёР·Рј'),
+(10, 'РџСЂРёРјРёС‚РёРІРёР·Рј');
 
--- Создание таблиц рёбер
+-- РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС† СЂС‘Р±РµСЂ
 DROP TABLE IF EXISTS PaintingsOfAuthors;
 CREATE TABLE PaintingsOfAuthors AS EDGE;
 
@@ -99,7 +99,7 @@ DROP TABLE IF EXISTS PaintingsOfStyles;
 CREATE TABLE PaintingsOfStyles AS EDGE;
 
 
--- Авторы
+-- РђРІС‚РѕСЂС‹
 INSERT INTO PaintingsOfAuthors
 VALUES ((SELECT $node_id FROM Paintings WHERE ID = 1), (SELECT $node_id FROM Authors WHERE ID = 1)),
        ((SELECT $node_id FROM Paintings WHERE ID = 2), (SELECT $node_id FROM Authors WHERE ID = 1)),
@@ -112,7 +112,7 @@ VALUES ((SELECT $node_id FROM Paintings WHERE ID = 1), (SELECT $node_id FROM Aut
        ((SELECT $node_id FROM Paintings WHERE ID = 9), (SELECT $node_id FROM Authors WHERE ID = 9)),
        ((SELECT $node_id FROM Paintings WHERE ID = 10), (SELECT $node_id FROM Authors WHERE ID = 8));
 
--- Жанры
+-- Р–Р°РЅСЂС‹
 INSERT INTO PaintingsOfGenres
 VALUES ((SELECT $node_id FROM Paintings WHERE ID = 1), (SELECT $node_id FROM Genres WHERE ID = 2)),
        ((SELECT $node_id FROM Paintings WHERE ID = 2), (SELECT $node_id FROM Genres WHERE ID = 1)),
@@ -125,7 +125,7 @@ VALUES ((SELECT $node_id FROM Paintings WHERE ID = 1), (SELECT $node_id FROM Gen
        ((SELECT $node_id FROM Paintings WHERE ID = 9), (SELECT $node_id FROM Genres WHERE ID = 4)),
        ((SELECT $node_id FROM Paintings WHERE ID = 10), (SELECT $node_id FROM Genres WHERE ID = 4));
 
--- Стили
+-- РЎС‚РёР»Рё
 INSERT INTO PaintingsOfStyles
 VALUES ((SELECT $node_id FROM Paintings WHERE ID = 1), (SELECT $node_id FROM Styles WHERE ID = 2)),
        ((SELECT $node_id FROM Paintings WHERE ID = 2), (SELECT $node_id FROM Styles WHERE ID = 1)),
@@ -140,19 +140,19 @@ VALUES ((SELECT $node_id FROM Paintings WHERE ID = 1), (SELECT $node_id FROM Sty
 
 --------------------------------Match---------------------
 
--- 1. Найти все картины, написанные Винсентом Ван Гогом
+-- 1. РќР°Р№С‚Рё РІСЃРµ РєР°СЂС‚РёРЅС‹, РЅР°РїРёСЃР°РЅРЅС‹Рµ Р’РёРЅСЃРµРЅС‚РѕРј Р’Р°РЅ Р“РѕРіРѕРј
 SELECT P.Title, P.YearCreation
 FROM Authors A,
      PaintingsOfAuthors PA,
      Paintings P
 WHERE MATCH(P-(PA)->A)
-  AND A.NameAuthors = 'Винсент'
-  AND A.LastNameAuthors = 'Ван Гог';
+  AND A.NameAuthors = 'Р’РёРЅСЃРµРЅС‚'
+  AND A.LastNameAuthors = 'Р’Р°РЅ Р“РѕРі';
 
 
 
 
--- 2. Найти авторов, написавших картины в жанре 'Пейзаж'
+-- 2. РќР°Р№С‚Рё Р°РІС‚РѕСЂРѕРІ, РЅР°РїРёСЃР°РІС€РёС… РєР°СЂС‚РёРЅС‹ РІ Р¶Р°РЅСЂРµ 'РџРµР№Р·Р°Р¶'
 SELECT DISTINCT A.NameAuthors, A.LastNameAuthors
 FROM Authors A,
      PaintingsOfAuthors PA,
@@ -160,12 +160,12 @@ FROM Authors A,
      PaintingsOfGenres PG,
      Genres G
 WHERE MATCH(P-(PA)->A) AND MATCH(P-(PG)->G)
-  AND G.Name = 'Живопись';
+  AND G.Name = 'Р–РёРІРѕРїРёСЃСЊ';
 
 
 
 
--- 3. Найти все стили, в которых написаны картины, созданные после 1900 года
+-- 3. РќР°Р№С‚Рё РІСЃРµ СЃС‚РёР»Рё, РІ РєРѕС‚РѕСЂС‹С… РЅР°РїРёСЃР°РЅС‹ РєР°СЂС‚РёРЅС‹, СЃРѕР·РґР°РЅРЅС‹Рµ РїРѕСЃР»Рµ 1900 РіРѕРґР°
 SELECT DISTINCT S.Name
 FROM Paintings P,
      PaintingsOfStyles PS,
@@ -176,7 +176,7 @@ WHERE MATCH(P-(PS)->S)
 
 
 
--- 4. Найти картины, которые являются кубизмом и написаны Пабло Пикассо
+-- 4. РќР°Р№С‚Рё РєР°СЂС‚РёРЅС‹, РєРѕС‚РѕСЂС‹Рµ СЏРІР»СЏСЋС‚СЃСЏ РєСѓР±РёР·РјРѕРј Рё РЅР°РїРёСЃР°РЅС‹ РџР°Р±Р»Рѕ РџРёРєР°СЃСЃРѕ
 SELECT P.Title
 FROM Authors A,
      PaintingsOfAuthors PA,
@@ -185,21 +185,21 @@ FROM Authors A,
      Styles S
 WHERE MATCH(P-(PA)->A) 
   AND MATCH(P-(PS)->S)
-  AND A.NameAuthors = 'Пабло'
-  AND A.LastNameAuthors = 'Пикассо'
-  AND S.Name = 'Кубизм';
+  AND A.NameAuthors = 'РџР°Р±Р»Рѕ'
+  AND A.LastNameAuthors = 'РџРёРєР°СЃСЃРѕ'
+  AND S.Name = 'РљСѓР±РёР·Рј';
 
 
 
 
 
--- 5. Найти картины, относящиеся к стилю 'Сюрреализм'
+-- 5. РќР°Р№С‚Рё РєР°СЂС‚РёРЅС‹, РѕС‚РЅРѕСЃСЏС‰РёРµСЃСЏ Рє СЃС‚РёР»СЋ 'РЎСЋСЂСЂРµР°Р»РёР·Рј'
 SELECT P.Title, P.YearCreation
 FROM Paintings P,
      PaintingsOfStyles PS,
      Styles S
 WHERE MATCH(P-(PS)->S)
-  AND S.Name = 'Сюрреализм';
+  AND S.Name = 'РЎСЋСЂСЂРµР°Р»РёР·Рј';
 
 
 
@@ -214,7 +214,7 @@ FROM Paintings AS P1,
      PaintingsOfAuthors FOR PATH AS pa,
      Authors FOR PATH AS A2
 WHERE MATCH(SHORTEST_PATH(P1(-(pa)->A2)+))
-  AND P1.Title = 'Подсолнухи';
+  AND P1.Title = 'РџРѕРґСЃРѕР»РЅСѓС…Рё';
 
 
   SELECT 
@@ -225,18 +225,18 @@ FROM Paintings AS P1,
      PaintingsOfAuthors FOR PATH AS pa,
      Authors FOR PATH AS A2
 WHERE MATCH(SHORTEST_PATH(P1(-(pa)->A2){1,3}))
-  AND P1.Title = 'Подсолнухи';
+  AND P1.Title = 'РџРѕРґСЃРѕР»РЅСѓС…Рё';
 
 
-----Для Power BI--
+----Р”Р»СЏ Power BI--
 
 SELECT @@servername -- WIN-RFMH2VKLV64\SQLEXPRESS01
 
---- Название базы данных: PaintingGraph
+--- РќР°Р·РІР°РЅРёРµ Р±Р°Р·С‹ РґР°РЅРЅС‹С…: PaintingGraph
 
 --- https://raw.githubusercontent.com/Luploof/PaintingGraph/refs/heads/main/picture/
 
--- Получить все картины и их авторов
+-- РџРѕР»СѓС‡РёС‚СЊ РІСЃРµ РєР°СЂС‚РёРЅС‹ Рё РёС… Р°РІС‚РѕСЂРѕРІ
 
 SELECT 
     P.ID AS IdFirst,
@@ -250,7 +250,7 @@ FROM Paintings AS P,
      Authors A
 WHERE MATCH(P-(PA)->A);
 
--- Получить все картины и жанры
+-- РџРѕР»СѓС‡РёС‚СЊ РІСЃРµ РєР°СЂС‚РёРЅС‹ Рё Р¶Р°РЅСЂС‹
 SELECT 
     P.ID AS IdFirst,
     P.Title AS First,
@@ -264,7 +264,7 @@ FROM Paintings AS P,
 WHERE MATCH(P-(PG)->G);
 
 
--- Получить все картины и стили
+-- РџРѕР»СѓС‡РёС‚СЊ РІСЃРµ РєР°СЂС‚РёРЅС‹ Рё СЃС‚РёР»Рё
 
 SELECT 
     P.ID AS IdFirst,
